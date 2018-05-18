@@ -36,6 +36,9 @@ script(type="text/ng-template", id="hotkeysModalTemplate")
 					span.description End of document
 			.col-xs-4
 				.hotkey
+					span.combination {{ctrl}} + K
+					span.description Search word under cursor (like * in vi)
+				.hotkey
 					span.combination {{ctrl}} + L
 					span.description Go To Line
 		h3 #{translate("editing")}
@@ -48,8 +51,14 @@ script(type="text/ng-template", id="hotkeysModalTemplate")
 					span.combination {{ctrl}} + D
 					span.description Delete Current Line
 				.hotkey
+					span.combination {{ctrl}} + {{shift}} + D
+					span.description Duplicate Current Line
+				.hotkey
 					span.combination {{ctrl}} + A
 					span.description Select All
+				.hotkey
+					span.combination {{ctrl}} + H
+					span.description Search or Replace
 			.col-xs-4
 				.hotkey
 					span.combination Ctrl + U
